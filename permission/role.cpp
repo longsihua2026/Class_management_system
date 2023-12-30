@@ -30,7 +30,9 @@ void role::read_role()
 
 role::role()
 {//角色初始化,如果没有用户则创建一个admin用户
-    if(!std::ifstream("user.txt"))//如果文件不存在则创建一个admin用户
+    std::ifstream file("user.txt");
+    // if(!file||file.peek() == std::ifstream::traits_type::eof())//如果文件不存在则创建一个admin用户（peek方法表示流到了文件末尾则返回EOF，而后方判断是不是到了末尾）
+    if(!file||file.peek() == EOF)
         write_role("admin","123456",1);
 }
 
