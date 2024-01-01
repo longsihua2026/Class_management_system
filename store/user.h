@@ -1,6 +1,7 @@
 //学生链表类
 #include <iostream>
 #include <string.h>
+#include "../utils/ioutil.cpp"
 
 
 #pragma once
@@ -45,6 +46,7 @@ class student_LinkList
     /*管理员操作函数*/
     public:
         void admin_addstudent(char sex[],char name[],char phone[]);//管理员添加学生
+        void admin_addstudent_csv(std::string filename);//管理员添加学生(csv)
         void admin_deletestudent(int id);//管理员删除学生
         void admin_setphone(int id,char phone[]);//管理员修改学生手机号
         void admin_setgrade(int id,int grade);//管理员修改学生成绩
@@ -69,5 +71,6 @@ class student_LinkList
     public:
         int getidentifier();//获取学生ID标识符
         int get_studentid(char name[]);//通过姓名获取学生ID
+        void file_create_student();//进行初始化时的学生创建
 
 };

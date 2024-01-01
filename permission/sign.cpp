@@ -6,7 +6,8 @@ void sign_menu(){
     std::cout << "1.读取用户列表"<<std::endl;
     std::cout << "2.注册"<<std::endl;
     std::cout << "3.登录"<<std::endl;
-    std::cout << "4.退出系统"<<std::endl;
+    std::cout << "4.进入学生端"<<std::endl;
+    std::cout << "5.退出系统"<<std::endl;
     std::cout << "------------------------------------------------------------------------"<< std::endl;
 }
 
@@ -22,7 +23,8 @@ void admin_login(){
     std::cout << "------------------------------------------------------------------------"<< std::endl;
 }
 
-void sign(){
+//-2的输入情况有bug，不允许用户输入-2.
+int sign(){
     sign_menu();
     std::cout<<"请输入你要进行的操作：";
     int choice,i;
@@ -61,6 +63,8 @@ void sign(){
                 }
                 break;
             case 4:
+                return 2;
+            case 5:
                 std::cout<<"退出成功！！！"<<std::endl;
                 exit(0);
             default:
@@ -81,8 +85,8 @@ void sign(){
             case -2:
                 break;
             case 1:
-                choice = -2;
-                return;
+                // choice = -2;
+                return 1;
             case 2:
                 std::cout<<"用户名："<<user.get_username()<<std::endl;
                 admin_login();
@@ -122,10 +126,13 @@ void sign(){
         if(choice==-2)
             break;
     }
-}
-
-int main(){
-    sign();
-    system("pause");
     return 0;
 }
+
+// int main(){
+//     int status;
+//     status = sign();
+//     std::cout<<"status:"<<status<<std::endl;
+//     system("pause");
+//     return 0;
+// }

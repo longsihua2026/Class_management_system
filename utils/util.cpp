@@ -1,11 +1,11 @@
 #include"../store/user.h"
 
 int student_LinkList::getidentifier()
-{//èŽ·å–å­¦ç”ŸIDæ ‡è¯†ç¬¦
+{//»ñÈ¡Ñ§ÉúID±êÊ¶·û
     return identifier;
 }
 int student_LinkList::get_studentid(char name[])
-{//é€šè¿‡å§“åèŽ·å–å­¦ç”ŸID
+{//Í¨¹ýÐÕÃû»ñÈ¡Ñ§ÉúID
     student_Node *p = head->next;
     while(p != NULL)
     {
