@@ -15,5 +15,7 @@ int student_LinkList::get_studentid(char name[])
         }
         p = p->next;
     }
+    std::cout<<"此班级没有此学生，请确认后再登录。"<<std::endl;
+    // exit(0);
     return 0;
 }

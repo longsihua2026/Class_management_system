@@ -9,7 +9,7 @@
             std::cout << "学生不存在,请确认输入情况" << std::endl;
             return NULL;
         }
-        while (i--)
+        while (id != p->student_ID)
         {
             p = p->next;
         }
