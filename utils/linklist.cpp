@@ -4,16 +4,23 @@
     {//获取节点
         int i = id;
         student_Node *p = head;
-        if (i > length)
+        // if (i > length)
+        // {
+        //     std::cout << "学生不存在,请确认输入情况" << std::endl;
+        //     return NULL;
+        // }
+        while (p != NULL && id != p->student_ID)
+        {
+            p = p->next;
+        }
+        if(p == NULL)
         {
             std::cout << "学生不存在,请确认输入情况" << std::endl;
             return NULL;
         }
-        while (id != p->student_ID)
-        {
-            p = p->next;
-        }
-        return p;
+        if(p->student_ID == id)
+            return p;
+        return NULL;
     }
     void student_LinkList::node_insert(student_Node *p)
     {//在头结点后插入节点(参数为结点，需装载好传入参数指针)
