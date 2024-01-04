@@ -8,6 +8,8 @@
 3. 数据的文件存储
 4. 中间件编译运行
 5. 链式存储链表的使用（基本操作）
+# 具体功能流程图
+![image](https://github.com/longsihua2026/Class_management_system/assets/149817277/48ee5d2d-a6a0-48b7-b65d-001919119a11)
 
 # 环境要求
 MinGW-w64安装
